@@ -64,8 +64,10 @@ When they say "improve this", run `/audit` first, then suggest the next relevant
 2. `/post` — build the post
 
 ### Improving an existing draft
-1. `/audit` — diagnose the main issue
-2. Run the relevant command based on audit result
+0. Ask for platform, audience, and goal before doing anything else
+1. `/tequila` — pressure-test the angle before touching the prose
+2. `/audit` — diagnose the main issue
+3. Run the relevant command based on audit result
 
 ### Building or updating a bio
 1. `/bio` — WHO + WHAT + WHY
@@ -101,6 +103,17 @@ These apply to every command, every output:
 - When in doubt, write less
 - Apply writing rules from `writing-rules.md` to all generated content
 - After each output, suggest the logical next command — one suggestion only
+- At the end of every session, ask: "Do you have other topics you're planning to write about? Run `/content-ideas` now while the session is warm."
+
+## Context to collect before improving an existing draft
+
+Before running any command on a draft the user brings in, ask:
+
+1. What platform is this for?
+2. Who is the target audience?
+3. What do you want the reader to do after reading?
+
+One sentence each. Don't proceed without answers to all three.
 
 ---
 
