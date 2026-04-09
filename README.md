@@ -1,17 +1,19 @@
-# Ghostwriter Skill for Claude Code
+# Ghostwriter
 
-A writing system built on 8 frameworks from Ship 30 for 30. Edit and improvement focused — not a content generator. Works on articles, LinkedIn posts, and bios.
+A writing skill for Claude Code. Made by Sofian Bettayeb.
+
+Ghostwriter doesn't write for you. It gives you frameworks, asks better questions, and gets out of the way. The writing is still yours to do.
 
 ## Install
 
 ```bash
-claude skill install gh:your-username/ghostwriter-skill
+claude skill install gh:sofianbettayeb/ghostwriter-skill
 ```
 
-Or clone and install locally:
+Or locally:
 
 ```bash
-git clone https://github.com/your-username/ghostwriter-skill
+git clone https://github.com/sofianbettayeb/ghostwriter-skill
 claude skill install ./ghostwriter-skill
 ```
 
@@ -19,48 +21,41 @@ claude skill install ./ghostwriter-skill
 
 | Command | What it does |
 |---|---|
-| `/audit` | Diagnoses a draft — digital writer vs legacy writer mindset |
-| `/content-ideas` | Generates 4 content angles from a seed topic |
-| `/headline` | Builds a 5-piece headline and runs a curiosity gap test |
-| `/format` | Checks skimmability, rhythm, and rate of revelation |
-| `/tequila` | Strips the clichés — finds what makes the piece actually different |
-| `/post` | Builds a LinkedIn post using a 12-strategy framework |
-| `/bio` | WHO + WHAT + WHY bio builder for any platform |
+| `/audit` | Diagnoses a draft — are you writing for the reader, or for yourself? |
+| `/content-ideas` | Four angles from a seed topic |
+| `/headline` | Builds a headline and runs a curiosity gap test |
+| `/format` | Checks skimmability, rhythm, and pacing |
+| `/tequila` | Finds what makes the piece different — strips the clichés first |
+| `/post` | LinkedIn post builder |
+| `/bio` | WHO + WHAT + WHY for any platform |
 | `/category` | Names and claims your content niche |
 
 ## Workflows
 
-**Write an article from scratch**
-1. `/content-ideas [topic]` — find the angle
-2. `/tequila` — make sure it's differentiated
-3. `/headline` — nail the title before writing
-4. Write the draft
-5. `/format` — structure and rhythm check
+Each command loads a framework. You get a diagnosis or a structure, not a finished draft.
 
-**Write a LinkedIn post**
-1. `/content-ideas [topic]` — find the angle
-2. `/post` — build the post
+**Article from scratch:**
+Run `/content-ideas` to find the angle, `/tequila` to check if it's actually different, `/headline` before you write a word, then `/format` once you have a draft.
 
-**Improve an existing draft**
-1. `/audit` — diagnose the main issue
-2. Run the relevant command based on audit result
+**LinkedIn post:**
+`/content-ideas` then `/post`.
 
-**Build or update a bio**
-1. `/bio` — WHO + WHAT + WHY
-2. `/category` — if the niche isn't clear yet
+**Improving a draft:**
+Start with `/audit` to name the problem, then run whichever command fits.
 
-## Customize your writing rules
+**Bio:**
+`/bio`, then `/category` if the niche still isn't clear.
 
-Edit `writing-rules.md` to set your voice, style constraints, and word blacklist. The skill loads this file at the start of every session.
+## Writing rules
 
-For project-specific rules, duplicate and rename it (e.g., `writing-rules-myblog.md`) and reference it when triggering the skill.
+`writing-rules.md` is where you set your voice, constraints, and word blacklist. The skill loads it at the start of every session. For project-specific rules, duplicate and rename it — e.g., `writing-rules-myblog.md`.
 
-## File structure
+## Files
 
 ```
 ghostwriter-skill/
-├── SKILL.md              # Skill definition and command routing
-├── writing-rules.md      # Voice, style, and word rules (edit this)
+├── SKILL.md
+├── writing-rules.md
 └── skills/
     ├── 01-audit.md
     ├── 02-content-ideas.md
@@ -72,11 +67,6 @@ ghostwriter-skill/
     └── 08-category.md
 ```
 
-## Trigger phrases
+---
 
-Beyond slash commands, the skill activates on natural language like:
-- "help me write a LinkedIn post"
-- "give me content ideas about X"
-- "improve this draft"
-- "write my bio"
-- "what should I write about"
+Made by [Sofian Bettayeb](https://github.com/sofianbettayeb)
