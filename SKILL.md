@@ -102,6 +102,8 @@ These apply to every command, every output:
 - Match length to task complexity — short questions get short answers
 - When in doubt, write less
 - Apply writing rules from `writing-rules.md` to all generated content
+- Never use em dashes in any output — replace with commas, parentheses, or periods
+- Always run /humanizer as the final step before handing back any article
 - After each output, suggest the logical next command — one suggestion only
 - At the end of every session, ask: "Do you have other topics you're planning to write about? Run `/content-ideas` now while the session is warm."
 
